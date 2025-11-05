@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KillPlayer : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class KillPlayer : MonoBehaviour
             Debug.Log("Player died!");
 
             Destroy(collision.gameObject);
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
